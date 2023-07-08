@@ -1,0 +1,9 @@
+.cartItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: bisque;
+  border-radius: 9px;
+  margin: 5px;
+  margin-top: 10px;
+}

@@ -1,0 +1,21 @@
+.searchForm {
+  background-color: #fff;
+  padding: 10px 5px;
+  background-image: linear-gradient(to top right, green, yellow);
+  border-radius: 13px;
+}
+
+.searchForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchForm form input {
+  height: 30px;
+  outline: none;
+  border-radius: 9px;
+  border: 0;
+  padding: 2px 5px;
+}
