@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./WeatherAPI.css";
 import SearchForm from "./SearchForm";
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
 const convertToDate = (milliSeconds) => {
   const date = new Date(milliSeconds);
@@ -20,10 +21,11 @@ const Weather = () => {
 
   useEffect(() => {
     const fetchWeatherData = async () => {
+      console.log(API_KEY);
       try {
         // Calling weather API
         const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f953bac019932b6020952a7b47f7c174&units=metric`
+          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
         );
         setWeatherData(response.data);
         setLoading(false);
